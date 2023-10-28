@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
 
 * {
   box-sizing: border-box;
@@ -27,12 +27,13 @@ body {
   grid-area: header;
   background-color: rgba(255, 0, 0, 1);
 }
-
+*/
 .navbar {
   grid-area: navbar;
-  background-color: rgba(140, 150, 160, 0.7);
+  background-color: rgb(255, 255, 255);
+  color: rgb(75, 86, 107);
 }
-
+/*
 .sidebar {
   grid-area: sidebar;
   background-color: rgba(140, 150, 160, 0.7);
@@ -80,7 +81,7 @@ body {
       200px    auto   200px;
   }
 }
-  
+  */
 
 /*body {
     background-image: url('volcanPoas.jpg');
