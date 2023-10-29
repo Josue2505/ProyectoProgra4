@@ -38,12 +38,12 @@ body {
   grid-area: sidebar;
   background-color: rgba(140, 150, 160, 0.7);
 }
-
+*/
 .main {
   grid-area: main;
-  background-color: rgba(140, 150, 160, 0.7);
+  background-color: 	#fffafa;
 }
-
+/*
 .footer {
   grid-area: footer;
   background-color: rgba(140, 150, 160, 0.7);
