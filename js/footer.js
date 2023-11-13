@@ -21,19 +21,16 @@ class MiFooter extends HTMLElement{
                         <h3>Product</h3>
                         <ul>
                             <li>
-                                <a href="#" title="API">API</a>
+                                <a href="#" title="API">Nintendo</a>
                             </li>
                             <li>
-                                <a href="#" title="Pricing">Pricing</a>
+                                <a href="#" title="PS4">Play Station 4</a>
                             </li>
                             <li>
-                                <a href="#" title="Documentation">Documentation</a>
+                                <a href="#" title="PS5">Play Station 5</a>
                             </li>
                             <li>
                                 <a href="#" title="Release Notes">Release Notes</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Status">Status</a>
                             </li>
                         </ul>
                     </section>
@@ -55,17 +52,17 @@ class MiFooter extends HTMLElement{
                     <div class='social-links'>
                         <ul>
                             <li>
-                                <a href="https://www.instagram.com/josue02505/" title="Instagram">
+                                <a href="https://www.instagram.com/josue02505/" title="Instagram/@josue02505">
                                     <img src="Imagenes/instagram.png" alt='Instagram'>                       
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Linkedin">
-                                    <img src="assets/linkedin.svg" alt='Linkedin'>
+                                <a href="https://www.instagram.com/gemelyd_/" title="Instagram/@gemelyd">
+                                    <img src="Imagenes/instagram.png" alt='Instagram'>                       
                                 </a>
                             </li>
                             <li>
-                                <a href="#" title="Twitter">
+                                <a href="https://twitter.com/Josue02505" title="Twitter">
                                     <img src="Imagenes/twitter.png" alt='Twitter'>
                                 </a>
                             </li>
@@ -73,7 +70,7 @@ class MiFooter extends HTMLElement{
                         </ul>
                     </div>
 
-                    <small>© Beigo VideoGame. <span id="year"></span>, All rights reserved</small>
+                    <small>© Beigo VideoGame. <span id="year">2023</span>, All rights reserved</small>
                 </div>
             </div>
               `

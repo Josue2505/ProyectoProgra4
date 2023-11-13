@@ -28,7 +28,7 @@ body {
 /*? footer containers */
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     background-color: var(--footer-background);
     min-width: 300px;
@@ -45,6 +45,7 @@ footer {
     flex-direction: column;
     max-width: 1320px;
     padding: 16px;
+    min-height: 200px;
 }
 
 

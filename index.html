@@ -5,40 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beigo Play</title>
     
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/styleFooter.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-    <link rel="stylesheet" href="styleFooter.css">
 
     <script src="js/footer.js"></script>
 
 </head>
 <body>
     <header class="header">
-        <p> sdasedff</p>
+        <p> Header</p>
     </header>
 
     <nav class="navbar">
-        <a href="">Inicio</a>
-        <a href="">Acerca de nosotros</a>
+        <div class="navbar1">
+            <a href="index.html">Inicio</a>
+            <a href="AboutUs.html">Acerca de nosotros</a>
+
+            <div class="logo-buscar">
+                <a href="index.html" style="min-width: 7rem;">
+                    <img src="Imagenes/Beigo.jpeg" alt="Logo" width="142">
+                </a>
+                
+            </div>
+
+            <div class="menus">
+                
+            </div>
+
+        </div>
 
 
     </nav>
 
     <aside class="sidebar">
-
+        <p>sidebar</p>
     </aside>
-    <article class="main">
 
+    <article class="main">
+        <p>Main, va la informacion</p>
+        <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner" interval="4000" tabindex="0" >
+      <div class="carousel-item active">
+        <img src="Imagenes/StreetFighter.jpg" alt="StreetFighter" class="d-block" style="width:100%; height: 500px;">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagenes/SuperMarioWonder.jpg" alt="SuperMarioWonder" class="d-block" style="width:100%;height: 500px;">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagenes/CrashBandicoot.png" alt="CrashBandicoot" class="d-block" style="width:100%;height: 500px;">
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  
+  <div class="container-fluid mt-3">
+    <h3>Carousel Example</h3>
+    <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+  </div>
     </article>
+
     <footer class="footer">
 
         <mi-footer></mi-footer>
 
     </footer>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </html>
