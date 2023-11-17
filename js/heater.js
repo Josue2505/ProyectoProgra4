@@ -42,6 +42,10 @@ class MiHeader extends HTMLElement{
               <li class="nav-item">
                 <a class="nav-link" href="creadores.html">Creadores</a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="Contacto.html">Contacto</a>
+              </li>
   
             </ul>
   

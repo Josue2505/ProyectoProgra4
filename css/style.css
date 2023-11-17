@@ -46,7 +46,7 @@ body {
 
 .main {
   grid-area: main;
-  background-color: rgba(255, 240, 240, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*.footer {
