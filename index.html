@@ -9,22 +9,33 @@
 
     <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
     <link rel="stylesheet" href="css/styleFooter.css">
-    <link rel="stylesheet" href="css/styleHeader.css">
+    <!--<link rel="stylesheet" href="css/styleHeader.css">-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+    
+    <script src="js/heater.js"></script>
     <script src="js/footer.js"></script>
 
 </head>
 <body>
     <header class="header">
 
-      <!--<div class="container">
+      <mi-header></mi-header>
+      
+    </header>
+
+    <!--<div class="container">
         <div class="logo">
           <a href="index.html" style="min-width: 7rem;">
             <img src="Imagenes/Beigo.jpeg" alt="Logo" width="142">
@@ -65,65 +76,12 @@
 
         
       </div>-->
-      
-    </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
-        <div class="container">
-          <div class="logo">
-            <a href="index.html" style="min-width: 7rem;">
-              <img src="Imagenes/Beigo.jpeg" alt="Logo" width="142">
-            </a>
-          </div>
-  
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-start" 
-                  aria-controls="navbar-start" 
-                  aria-expanded="false" 
-                  aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse" id="navbar-start">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="nintendo.html">Nintendo</a>
-              </li>
-  
-              <li class="nav-item">
-                <a class="nav-link" href="ps4.html">PlayStation 4</a>
-              </li>
-  
-              <li class="nav-item">
-                <a class="nav-link" href="ps5.html">PlayStation 5</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="AboutUs.html">Acerca de Nosotros</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="creadores.html">Creadores</a>
-              </li>
-  
-            </ul>
-  
-          </div>
-  
-        </div>
-  
-      </nav>
-
-    <aside class="sidebar">
+    <!--<aside class="sidebar">
         <p>sidebar</p>
-    </aside>
+    </aside>-->
     
-    <br><br
-    >
+    <br>
     <article class="main">
       <div class="carucel">
          <!-- Carousel -->
@@ -162,13 +120,17 @@
          </button>
 
         </div>
-   
+        
+        <br>
+        
         <div class="container-fluid mt-3 text-center">
-          <h3>Beigo Video Games</h3>
-          <p>Ven a informarte y a disfrutar del top de los mejores juegos de cada consola</p>
+          <h2>Beigo Video Games</h2>
+          <h5>Ven a informarte y a disfrutar del top de los mejores juegos de cada consola</h5>
         </div>
 
       </div>
+
+      <br><br>
 
       <div class="container-fluid">
         <div class="row">
@@ -204,7 +166,7 @@
                 <img src="Imagenes/logoPS5.jpg" alt="" class="img-fluid">
               </div>
               <div class="card-body">
-                <h5 class="card-title">Nintendo</h5>
+                <h5 class="card-title">PlayStation 5</h5>
                 <p>Juega mas alla de los limites: Descubre el Futuro del Juego con PS5.</p>
                 <a href="ps5.html" class="btn btn-primary">Ver mas</a>
               </div>
@@ -217,29 +179,37 @@
           
           <div class="container-fluid mt-3 text-center">
             <h3>Comentarios</h3>
-            <p>Deja un comentario sobre que jue deberian de estar en el top de nuestra pagina</p>
+            <p>Deja un comentario sobre que juegos deberian de estar en el top de nuestra pagina</p>
+            <div class="col-md-12">
+              <div class="mb-3">
+                <textarea name="form-control" placeholder="Comentarios" rows="3" required></textarea>
+              </div>
+              <button class="btn btn-primary bt-lg btn-block mt-3" type="button">Enviar</button>
+            </div>
           </div>
 
-          <div class="bg-image text-white text-center">
-            <img src="Imagenes/bannerJuegos.jpeg" class="d-block" style="width:100%;">
+          <br>
+          
+          <div>
+            <div class="card bg-image text-center pb-2">
+              <img src="Imagenes/bannerJuegos.jpeg" class="d-block" style="width:100%;">
+                            
+            </div>
           </div>
+
+          
         </div>
 
       </div>
     </article>
 
-    <footer class="footer">
+      <footer class="footer">
 
-        <mi-footer></mi-footer>
+          <mi-footer></mi-footer>
 
-    </footer>
+      </footer>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      
 
 </html>
