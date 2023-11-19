@@ -24,15 +24,35 @@ class MiHeader extends HTMLElement{
           <div class="collapse navbar-collapse" id="navbar-start">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="nintendo.html">Nintendo</a>
+                <button class="btn btn-link nav-link" data-bs-toggle="collapse" data-bs-target="#submenuNintendo" aria-controls="submenuNintendo" aria-expanded="false">
+                  Nintendo
+                </button>
+                <div class="collapse" id="submenuNintendo">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="nintendo.html">Switch</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
   
               <li class="nav-item">
-                <a class="nav-link" href="ps4.html">PlayStation 4</a>
-              </li>
-  
-              <li class="nav-item">
-                <a class="nav-link" href="ps5.html">PlayStation 5</a>
+                <button class="btn btn-link nav-link" data-bs-toggle="collapse" data-bs-target="#submenuPlayStation" aria-controls="submenuPlayStation" aria-expanded="false">
+                  PlayStation
+                </button>
+                <div class="collapse" id="submenuPlayStation">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="ps4.html">PlayStation 4</a>
+                    </li>
+                  </ul>
+
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="ps5.html">PlayStation 5</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
 
               <li class="nav-item">
