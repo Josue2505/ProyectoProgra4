@@ -23,6 +23,7 @@ class MiHeader extends HTMLElement{
   
           <div class="collapse navbar-collapse" id="navbar-start">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
               <li class="nav-item">
                 <button class="btn btn-link nav-link" data-bs-toggle="collapse" data-bs-target="#submenuNintendo" aria-controls="submenuNintendo" aria-expanded="false">
                   Nintendo
@@ -53,6 +54,10 @@ class MiHeader extends HTMLElement{
                     </li>
                   </ul>
                 </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
               </li>
 
               <li class="nav-item">
