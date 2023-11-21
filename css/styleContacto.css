@@ -1,0 +1,14 @@
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    max-width: 1550px; 
+    margin: 0 auto; 
+}
+
+.contenedor-imagenes .imagen {
+    max-width: 45%; 
+    width: 1000%; 
+    height: auto;
+    margin: 0 0%; 
+}
