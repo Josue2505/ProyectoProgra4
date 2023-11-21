@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styleCreators.css">
     <link rel="stylesheet" href="css/styleFooter.css">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -16,108 +17,52 @@
 
 </head>
 <body>
-
     <header class="header">
         <mi-header></mi-header>
     </header>
 
-    <nav class="navbar">
-        <a></a>
-        <a href="index.html">Inicio</a>
-        <a href="AboutUs.html">Acerca de nosotros</a>
-
-
-    </nav>
-
     <aside class="sidebar">
-
     </aside>
     <article class="main">
 
-    <div class="container">
-        <table>
+    <div class="container mt-4">
+        <h2 class="mb-4">Creadores</h2>
+
+        <table class="table">
             <thead>
                 <tr>
-                    <th>Foto</th>
-                    <th>Nombre</th>
-                    <th>Cedula</th>
-                    <th>Correo</th>
-                    <th>Información</th>
-                    <th>Contacto</th>
+                    <th> </th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Cedula</th>
+                    <th class="text-center">Correo</th>
+                    <th class="text-center">Información</th>
+                    <th class="text-center">Contacto</th>
 
                 </tr>
             </thead>
             <tbody>
-                <tr class="table">
-                    <th class="aling-middle"><img src="Imagenes/josuePerfil.jpg" alt="Profile" class="profile profile-image img"></th>
-                    <th class="aling-middle">Josue Beita Fonseca</th>
-                    <th class="aling-middle">117100299</th>
-                    <th class="aling-middle">jbfonseca13@hotmail.com</th>
-                    <th class="aling-middle">Joven apacionado por las tecnologias, dispuesto a crecer cada vez mas en este ambito.</th>
-                    <th class="aling-middle">87404728</th>   
+                <tr>
+                    <td  calas="tabla tabla-imagen"><img src="Imagenes/josuePerfil.jpg" alt="Foto Persona 1"></td>
+                    <td class="text-center">Josue Beita Fonseca</td>
+                    <td class="text-center">117100299</td>
+                    <td class="text-center">jbfonseca13@hotmail.com</td>
+                    <td class="text-center">Joven apacionado por las tecnologias, dispuesto a crecer cada vez mas en este ambito.</td>
+                    <td class="text-center">87404728</td>
                 </tr>
-            </tbody>
-            <tbody>
-                <tr class="table">
-                    <th class="aling-middle"><img src="Imagenes/josuePerfil.jpg" alt="Profile" class="profile profile-image img"></th>
-                    <th class="aling-middle">Josue Beita Fonseca</th>
-                    <th class="aling-middle">117100299</th>
-                    <th class="aling-middle">jbfonseca13@hotmail.com</th>
-                    <th class="aling-middle">Joven apacionado por las tecnologias, dispuesto a crecer cada vez mas en este ambito.</th>
-                    <th class="aling-middle">87404728</th>   
+                <tr>
+                    <td calas="tabla tabla-imagen"><img src="Imagenes/EmleyPerfil.jpg" alt="Foto Persona 2"></td>
+                    <td class="text-center">Emely González Bermúdez</td>
+                    <td class="text-center">117890386</td>
+                    <td class="text-center">emelygonzalez@gmail.com</td>
+                    <td class="text-center">Profesional orientada a tecnologias, dispuesta a crecer más profecionalmente</td>
+                    <td class="text-center">60623069</td>
                 </tr>
             </tbody>
         </table>
     </div>
         <br><br>
-        <div class="container">       
-            <div class="profile-wrapper">
-                <div class="profile">
-                    <div class="profile-image">
-                        <img
-                            src="Imagenes/josuePerfil.jpg"
-                            alt="Profile"
-                        >
-                    </div>
-                    <ul class="social-icons">
-                        <li>
-                            <a href="#instagram" title="Instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
-                                     stroke-linecap="round" stroke-linejoin="round"
-                                >
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#twitter" title="Twitter">
-                                <!-- svg twitter -->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#threads" title="Threads">
-                                <!-- svg linkedin -->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#linkedin" title="Linkedin">
-                                <!-- svg socials -->
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="profile-name">
-                        <h2>Josue Beita</h2>
-                        <div class="profile-bio">
-                            I'm a JavaScript full-stack engineer, 
-                            love working with <em>React</em> and <em>Node.js</em>.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            
+ 
     </article>
     <footer class="footer">
 
@@ -129,5 +74,8 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </html>
