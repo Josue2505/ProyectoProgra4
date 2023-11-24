@@ -54,6 +54,56 @@
     </header>
   
     <nav class="navbar">
+      <div id="sugerenciasContainer" style="display:none;">
+        <ul id="sugerencias"></ul>
+      </div>
+
+      <script>
+          var juegos = {
+              'assassin': 'assasins.html',
+              'crash trilogy': 'crashTrilogy.html',
+              'crash team': 'crashTeam.html',
+              // Agrega más juegos según sea necesario
+          };
+
+          $(document).ready(function() {
+              $('#searchInput').on('input', function() {
+                  buscarJuego();
+              });
+          });
+
+          function buscarJuego() {
+              var nombreJuego = $('#searchInput').val().toLowerCase();
+              var coincidencias = Object.keys(juegos).filter(function(juego) {
+                  return juego.includes(nombreJuego);
+              });
+
+              mostrarCoincidencias(coincidencias);
+          }
+
+          function mostrarCoincidencias(coincidencias) {
+              $('#sugerencias').empty();
+
+              for (var i = 0; i < coincidencias.length; i++) {
+                  var juego = coincidencias[i];
+                  var html = '<li><a href="' + juegos[juego] + '">' + juego + '</a></li>';
+                  $('#sugerencias').append(html);
+              }
+
+              if (coincidencias.length === 0) {
+                  $('#sugerencias').append('<li>No se encontraron coincidencias.</li>');
+              }
+
+              $('#sugerenciasContainer').show();
+          }
+
+          $(document).on('click', function(event) {
+              if (!$(event.target).closest('#sugerenciasContainer').length) {
+                  $('#sugerenciasContainer').hide();
+              }
+          });
+      </script>
+
       <div>
         <div class="card bg-image text-center pb-2">
           <img src="Imagenes/PS5/bannerPS5.jpg" class="d-block" style="width:100%;">

@@ -103,6 +103,11 @@
                         <label for="nombre">Nombre Completo</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <select class="form-control" id="nacionalidad" name="nacionalidad"></select>
+                    </div>
         
                     <div class="form-group">
                         <label for="fechaNacimiento">Fecha de Nacimiento</label>
@@ -158,6 +163,7 @@
                             <th>Email</th>
                             <th>Nombre Completo</th>
                             <th>Fecha de Nacimiento</th>
+                            <th>Nacionalidad</th>
                             <th>Rango de Ingreso</th>
                             <th>Género</th>
                             <th>Grado Académico</th>
@@ -177,6 +183,35 @@
         
             <!-- Script para calcular la edad y mostrar datos -->
             <script>
+                
+                function cargarNacionalidades() {
+                    // Realizar una solicitud a la API de Rest Countries para obtener información de todos los países
+                    $.get('https://restcountries.com/v3.1/all', function(response) {
+                        // Extraer la información relevante para cada país
+                        var nacionalidades = response.map(function(country) {
+                            return {
+                                nombre: country.name.common,
+                                codigo: country.cca2
+                            };
+                        });
+
+                        // Llenar el combo box con las nacionalidades
+                        var selectNacionalidad = $('#nacionalidad');
+                        nacionalidades.forEach(function(nacionalidad) {
+                            selectNacionalidad.append($('<option>', {
+                                value: nacionalidad.codigo,
+                                text: nacionalidad.nombre
+                            }));
+                        });
+                    });
+                }
+
+                // Llamar a la función para cargar las nacionalidades al cargar la página
+                $(document).ready(function() {
+                    cargarNacionalidades();
+                });
+
+
                 function mostrarDatos() {
                     var email = $("#email").val();
                     var nombre = $("#nombre").val();
