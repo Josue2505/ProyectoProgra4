@@ -46,30 +46,7 @@
       });
     </script>
   
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script>
-      function buscarJuego() {
-          // Obtener el valor del campo de búsqueda
-          var nombreJuego = $('#searchInput').val().toLowerCase();
-  
-          // Lista de juegos y sus correspondientes HTML
-          var juegos = {
-              'assassin': 'assasins.html',
-              'crash trilogy': 'crashTrilogy.html',
-              'crash team': 'crashTeam.html',
-              // Agrega más juegos según sea necesario
-          };
-  
-          // Verificar si el juego existe en la lista
-          if (juegos.hasOwnProperty(nombreJuego)) {
-              // Redireccionar al HTML correspondiente
-              window.location.href = juegos[nombreJuego];
-          } else {
-              // Mostrar un mensaje si el juego no se encuentra
-              alert('Juego no encontrado.');
-          }
-      }
-  </script>
+ 
   
 
 </head>
@@ -83,6 +60,56 @@
     </header>
 
     <nav class="navbar">
+      <div id="sugerenciasContainer" style="display:none;">
+        <ul id="sugerencias"></ul>
+    </div>
+
+    <script>
+        var juegos = {
+            'assassin': 'assasins.html',
+            'crash trilogy': 'crashTrilogy.html',
+            'crash team': 'crashTeam.html',
+            // Agrega más juegos según sea necesario
+        };
+
+        $(document).ready(function() {
+            $('#searchInput').on('input', function() {
+                buscarJuego();
+            });
+        });
+
+        function buscarJuego() {
+            var nombreJuego = $('#searchInput').val().toLowerCase();
+            var coincidencias = Object.keys(juegos).filter(function(juego) {
+                return juego.includes(nombreJuego);
+            });
+
+            mostrarCoincidencias(coincidencias);
+        }
+
+        function mostrarCoincidencias(coincidencias) {
+            $('#sugerencias').empty();
+
+            for (var i = 0; i < coincidencias.length; i++) {
+                var juego = coincidencias[i];
+                var html = '<li><a href="' + juegos[juego] + '">' + juego + '</a></li>';
+                $('#sugerencias').append(html);
+            }
+
+            if (coincidencias.length === 0) {
+                $('#sugerencias').append('<li>No se encontraron coincidencias.</li>');
+            }
+
+            $('#sugerenciasContainer').show();
+        }
+
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('#sugerenciasContainer').length) {
+                $('#sugerenciasContainer').hide();
+            }
+        });
+    </script>
+
       <div>
         <div class="card bg-image text-center pb-2">
           <img src="Imagenes/PS4/bannerPS4.jpg" class="d-block" style="width:100%;">
