@@ -9,9 +9,9 @@ class MiHeader extends HTMLElement{
             </a>
           </div>
   
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <form class="form-inline" id="searchForm">
+              <input class="form-control mr-sm-2" type="search" placeholder="Juegos" aria-label="Search" id="searchInput">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="buscarJuego()">Buscar</button>
           </form>
   
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-start" 
@@ -24,6 +24,10 @@ class MiHeader extends HTMLElement{
           <div class="collapse navbar-collapse" id="navbar-start">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+
               <li class="nav-item">
                 <button class="btn btn-link nav-link" data-bs-toggle="collapse" data-bs-target="#submenuNintendo" aria-controls="submenuNintendo" aria-expanded="false">
                   Nintendo
@@ -54,10 +58,6 @@ class MiHeader extends HTMLElement{
                     </li>
                   </ul>
                 </div>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
               </li>
 
               <li class="nav-item">

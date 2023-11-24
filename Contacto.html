@@ -17,6 +17,39 @@
     <script src="js/heater.js"></script>
     <script src="js/footer.js"></script>
 
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .btnRegistrar {
+            width: 100%;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
 <body>
     <header class="header">
@@ -57,6 +90,127 @@
             <br>
         </section>
         
+        <section class="registro">
+            <div class="container mt-5">
+                <form id="miFormulario">
+        
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="rangoIngreso">Rango de Ingreso</label>
+                        <input type="range" class="form-range" id="rangoIngreso" name="rangoIngreso" min="0" max="100" step="1">
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Sexo</label>
+                        <div>
+                            <label class="form-check-label">
+                                <input class="form-check-sexo" type="radio" name="sexo" value="Masculino" required> Masculino
+                            </label>
+                        </div>
+                        <div>
+                            <label class="form-check-label">
+                                <input class="form-check-sexo" type="radio" name="sexo" value="Femenino" required> Femenino
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="gradoAcademico"><h6>Grado Académico</h6></label>
+                        <div class="form-check">
+                            <input class="form-check-gradoAcademico" type="checkbox" name="gradoAcademico[]" value="Secundaria">
+                            <label class="form-check-label">Secundaria</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-gradoAcademico" type="checkbox" name="gradoAcademico[]" value="Diplomado">
+                            <label class="form-check-label">Preparatoria</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-gradoAcademico" type="checkbox" name="gradoAcademico[]" value="Licenciatura">
+                            <label class="form-check-label">Licenciatura</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Campo oculto para la edad -->
+                    <input type="hidden" id="edad" name="edad">
+        
+                    <button type="button" class="btn btn-primary btnRegistrar" onclick="mostrarDatos()">Enviar</button>
+                </form>
+        
+                <h2>Datos Ingresados</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Nombre Completo</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Rango de Ingreso</th>
+                            <th>Género</th>
+                            <th>Grado Académico</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaDatos">
+                        <!-- Datos ingresados -->
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Agrega el enlace a Bootstrap JS y jQuery -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+            <!-- Script para calcular la edad y mostrar datos -->
+            <script>
+                function mostrarDatos() {
+                    var email = $("#email").val();
+                    var nombre = $("#nombre").val();
+                    var fechaNacimiento = $("#fechaNacimiento").val();
+                    var rangoIngreso = $("#rangoIngreso").val();
+                    var genero = $("input[name='sexo']:checked").val();
+                    var gradoAcademico = $("input[name='gradoAcademico[]']:checked").map(function() {
+                        return $(this).val();
+                    }).get().join(', ');var edad = $("#edad").val();
+        
+                    var nuevaFila = $("<tr>").append(
+                        $("<td>").text(email),
+                        $("<td>").text(nombre),
+                        $("<td>").text(fechaNacimiento),
+                        $("<td>").text(rangoIngreso),
+                        $("<td>").text(genero),
+                        $("<td>").text(gradoAcademico),
+                        $("<td>").text(edad)
+                    );
+        
+                    $("#tablaDatos").append(nuevaFila);
+        
+                    $("#miFormulario")[0].reset();
+                }
+        
+                //Calcular la edad
+                $('#fechaNacimiento').change(function () {
+                    var fechaNacimiento = new Date($(this).val());
+                    var hoy = new Date();
+                    var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+                    $('#edad').val(edad);
+                });
+            </script>
+        </section>
         
     </article>
   

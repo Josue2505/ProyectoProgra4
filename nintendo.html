@@ -24,6 +24,25 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script>
+      $(document).ready(function () {
+          $(".card").hover(
+              function () {
+                  $(this).find(".btn").css({
+                      backgroundColor: '#17a2b8', 
+                      color: '#000' 
+                  });
+              },
+              function () {
+                  $(this).find(".btn").css({
+                      backgroundColor: '#007bff', 
+                      color: '#fff'
+                  });
+              }
+          );
+      });
+    </script>
+
 </head>
 <body>
     
