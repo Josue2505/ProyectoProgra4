@@ -17,39 +17,6 @@
     <script src="js/heater.js"></script>
     <script src="js/footer.js"></script>
 
-    <!--<style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            margin-top: 50px;
-            max-width: 500px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        label {
-            margin-bottom: 5px;
-        }
-
-        .form-control {
-            margin-bottom: 15px;
-        }
-
-        .btnRegistrar {
-            width: 100%;
-        }
-
-        p {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>-->
-
 </head>
 <body>
     <header class="header">
@@ -157,23 +124,25 @@
                 </form>
         
                 <h2>Datos Ingresados</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Email</th>
-                            <th>Nombre Completo</th>
-                            <th>Nacionalidad</th>
-                            <th>Fecha de Nacimiento</th>
-                            <th>Rango de Ingreso</th>
-                            <th>Género</th>
-                            <th>Grado Académico</th>
-                            <th>Edad</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaDatos">
-                        <!-- Datos ingresados -->
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Nombre Completo</th>
+                                <th>Nacionalidad</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th>Rango de Ingreso</th>
+                                <th>Género</th>
+                                <th>Grado Académico</th>
+                                <th>Edad</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaDatos">
+                            <!-- Datos ingresados -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -183,11 +152,10 @@
             <script>
                 
                 function cargarNacionalidades() {
-                    // Realizar una solicitud a la API de Rest Countries para obtener información de todos los países
+                    // Realizar una solicitud a la API de Rest Countries 
                     fetch('https://restcountries.com/v3.1/all')
                         .then(response => response.json())
                         .then(data => {
-                            // Extraer la información relevante para cada país y traducir los nombres al español
                             var nacionalidades = data.map(country => ({
                                 nombre: country.name.common,
                                 codigo: country.cca2
