@@ -10,10 +10,9 @@ class MiFooter extends HTMLElement{
 
                         <section class="footer-logo">
                             <h2>
-                                <svg width="2103" height="1996" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <image x="0" y="0" width="800" height="700" xlink:href="Imagenes/Beigo.jpeg"/>
-                                
-                                </svg>
+                                <a href="index.html" style="min-width: 7rem;">
+                                    <img src="Imagenes/Beigo.jpeg" alt="Logo" width="110">
+                                </a>
                            </h2>
                         </section>
 
@@ -41,6 +40,10 @@ class MiFooter extends HTMLElement{
 
                                 <li>
                                     <a href="creadores.html" title="Creators">Creators</a>
+                                </li>
+
+                                <li>
+                                    <a href="Contacto.html" title="Contatc">Contact</a>
                                 </li>
                             </ul>
                         </section>
