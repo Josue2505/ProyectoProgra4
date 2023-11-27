@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beigo Play</title>
+    <title>Beigo Play | Nintendo</title>
+    <link rel="icon" href="Imagenes/Beigo.ico">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -70,47 +71,62 @@
           };
 
           $(document).ready(function() {
-              $('#searchInput').on('input', function() {
-                  buscarJuego();
-              });
+            $('#searchInput').on('input', function() {
+                buscarJuego();
+            });
           });
 
           function buscarJuego() {
-              var nombreJuego = $('#searchInput').val().toLowerCase();
-              var coincidencias = Object.keys(juegos).filter(function(juego) {
-                  return juego.includes(nombreJuego);
-              });
+            var nombreJuego = $('#searchInput').val().toLowerCase();
 
-              mostrarCoincidencias(coincidencias);
+            if (nombreJuego.trim() === '') {
+              $('#sugerenciasContainer').hide();
+              return;
+            }
+
+            var coincidencias = Object.keys(juegos).filter(function(juego) {
+              return juego.includes(nombreJuego);
+            });
+
+            mostrarCoincidencias(coincidencias);
           }
 
           function mostrarCoincidencias(coincidencias) {
-              $('#sugerencias').empty();
+            $('#sugerencias').empty();
 
-              for (var i = 0; i < coincidencias.length; i++) {
-                  var juego = coincidencias[i];
-                  var html = '<li><a href="' + juegos[juego] + '">' + juego + '</a></li>';
-                  $('#sugerencias').append(html);
-              }
+            for (var i = 0; i < coincidencias.length; i++) {
+              var juego = coincidencias[i];
+              var html = '<li><a href="' + juegos[juego] + '">' + juego + '</a></li>';
+              $('#sugerencias').append(html);
+            }
 
-              if (coincidencias.length === 0) {
-                  $('#sugerencias').append('<li>No se encontraron coincidencias.</li>');
-              }
+            if (coincidencias.length === 0) {
+              $('#sugerencias').append('<li>No se encontraron coincidencias.</li>');
+            }
 
-              $('#sugerenciasContainer').show();
+            $('#sugerenciasContainer').show();
           }
 
           $(document).on('click', function(event) {
-              if (!$(event.target).closest('#sugerenciasContainer').length) {
-                  $('#sugerenciasContainer').hide();
-              }
+            if (!$(event.target).closest('#sugerenciasContainer').length) {
+              $('#sugerenciasContainer').hide();
+            }
           });
-      </script>
+        </script>
 
-      <div>
-        <div class="card bg-image text-center pb-2">
-          <img src="Imagenes/Nintendo/MarioBanner.png" class="d-block" style="width:100%;">
-                        
+        <div>
+          <div class="card bg-image text-center pb-2">
+            <img src="Imagenes/Nintendo/MarioBanner.png" class="d-block" style="width:100%;" onclick="reproducirAudio()">
+            <audio id="miAudio" controls style="display: none;">
+              <source src="audio/marioVoz.mp3" type="audio/mpeg">
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+            <script>
+              function reproducirAudio() {
+                  var audio = document.getElementById("miAudio");
+                  audio.play();
+              }
+          </script>
         </div>
       </div>
     </nav>

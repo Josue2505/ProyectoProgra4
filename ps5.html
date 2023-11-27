@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beigo Play</title>
+    <title>Beigo Play | PS5</title>
+    <link rel="icon" href="Imagenes/Beigo.ico">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -77,12 +78,18 @@
           });
 
           function buscarJuego() {
-              var nombreJuego = $('#searchInput').val().toLowerCase();
-              var coincidencias = Object.keys(juegos).filter(function(juego) {
-                  return juego.includes(nombreJuego);
-              });
+            var nombreJuego = $('#searchInput').val().toLowerCase();
 
-              mostrarCoincidencias(coincidencias);
+            if (nombreJuego.trim() === '') {
+              $('#sugerenciasContainer').hide();
+            return;
+            }
+
+            var coincidencias = Object.keys(juegos).filter(function(juego) {
+              return juego.includes(nombreJuego);
+            });
+
+            mostrarCoincidencias(coincidencias);
           }
 
           function mostrarCoincidencias(coincidencias) {
@@ -135,7 +142,7 @@
               <div class="col-12 col-md-12 col-lg-3">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/crashTeamRumble.jpg" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/crashTeamRumble.jpg" alt="Crash Team Rumble" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>Crash Team Rumble</h5>
@@ -148,7 +155,7 @@
               <div class="col-12 col-md-12 col-lg-3">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/fc24.jpg" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/fc24.jpg" alt="FC24" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>EA Sports FC24</h5>
@@ -161,7 +168,7 @@
               <div class="col-12 col-md-12 col-lg-3">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/finalFantasy.jpg" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/finalFantasy.jpg" alt="Final Fantasy" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>Final Fantasy XVI</h5>
@@ -174,7 +181,7 @@
               <div class="col-12 col-md-12 col-lg-3">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/horizon.jpg" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/horizon.jpg" alt="Horizon" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>Horizon Forbidden West: The Burning Shores</h5>
@@ -187,7 +194,7 @@
               <div class="col-12 col-md-12 col-lg-3">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/hogwartsLegacy.jpg" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/hogwartsLegacy.jpg" alt="Hogwarts" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>Hogwarts Legacy</h5>
@@ -200,7 +207,7 @@
               <div class="col-12 col-md-12 col-lg-3">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/inmortalsOfAveum.jpg" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/inmortalsOfAveum.jpg" alt="Inmortals Of Aveum" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>Immortals of Aveum</h5>
@@ -213,7 +220,7 @@
               <div class="col-12 col-md-12 col-lg-3 h-100">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/mortalKombat.png" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/mortalKombat.png" alt="Mortal Kombat" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>Mortal Kombat 1</h5>
@@ -226,7 +233,7 @@
               <div class="col-12 col-md-12 col-lg-3 h-100">
                 <div class="card bg-light shadow-sm border-0 px-2 py-3 mb-4">
                   <div class="text-center">
-                    <img src="Imagenes/PS5/uncharted.jpeg" alt="" class="img-fluid">
+                    <img src="Imagenes/PS5/uncharted.jpeg" alt="UNCHARTED" class="img-fluid">
                   </div>
                   <div class="card-body">
                     <h5>UNCHARTED: Legacy of Thieves Collection</h5>

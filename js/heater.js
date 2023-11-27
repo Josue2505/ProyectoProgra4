@@ -11,7 +11,6 @@ class MiHeader extends HTMLElement{
   
           <form class="form-inline" id="searchForm">
               <input class="form-control mr-sm-2" type="search" placeholder="Juegos" aria-label="Search" id="searchInput">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="buscarJuego()">Buscar</button>
           </form>
   
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-start" 
